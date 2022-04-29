@@ -25,10 +25,19 @@ namespace SortearNumero
         {
             Random sorteio = new Random();
 
+            int sorteado;
+            int[] verificar = new int[70];
+
             string resultado = "";
             for(int i=0; i<6; i++)
             {
-                resultado = resultado + "- " + sorteio.Next(0, 61);
+                inicio:
+                sorteado = sorteio.Next(0, 61);
+
+
+
+                resultado = resultado + " - " + sorteio.Next(0, 61);
+                lblResultado.Text = resultado;
             }
         }
     }
