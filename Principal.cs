@@ -34,10 +34,17 @@ namespace SortearNumero
                 inicio:
                 sorteado = sorteio.Next(0, 61);
 
+                for(int x=0; x<6; x++)
+                {
+                    if(verificar[x] == sorteado)
+                    {
+                        goto inicio;
+                    }
+                }
 
-
-                resultado = resultado + " - " + sorteio.Next(0, 61);
+                resultado = resultado + " - " + sorteado;
                 lblResultado.Text = resultado;
+                verificar[i] = sorteado;
             }
         }
     }
